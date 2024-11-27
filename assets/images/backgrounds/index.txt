@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Flexbox e jQuery</title>
+
+    <!-- Estilos principais -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
+    <link rel="stylesheet" href="assets/css/styles.css"> <!-- Adicionado -->
+    <link rel="stylesheet" href="assets/css/responsive.css"> <!-- Adicionado -->
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">Meu Projeto Flexbox e jQuery</h1>
+            <nav>
+                <a href="#">Início</a>
+                <a href="#">Séries</a>
+                <a href="#">Filmes</a>
+                <a href="#">Documentários</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Conteúdo principal -->
+        <div class="filme-principal">
+            <div class="container">
+                <h3 class="titulo">Destaque: Projeto Flexbox</h3>
+                <p class="descricao">Explore o mundo de Flexbox e jQuery com nossa implementação prática e funcional.</p>
+                <div class="botoes">
+                    <button role="button" class="botao">
+                        <i class="fas fa-play"></i>
+                        Explorar Agora
+                    </button>
+                    <button role="button" class="botao">
+                        <i class="fas fa-info-circle"></i>
+                        Mais Informações
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carrossel de Filmes -->
+        <div class="carousel-filmes">
+            <div class="carousel">
+                <div><img class="box-filme" src="assets/images/mini1.jpg" alt="Miniatura 1"></div>
+                <div><img class="box-filme" src="assets/images/mini2.jpg" alt="Miniatura 2"></div>
+                <div><img class="box-filme" src="assets/images/mini3.jpg" alt="Miniatura 3"></div>
+                <div><img class="box-filme" src="assets/images/mini4.jpg" alt="Miniatura 4"></div>
+                <div><img class="box-filme" src="assets/images/mini5.jpg" alt="Miniatura 5"></div>
+                <div><img class="box-filme" src="assets/images/mini6.jpg" alt="Miniatura 6"></div>
+                <div><img class="box-filme" src="assets/images/mini7.jpg" alt="Miniatura 7"></div>
+                <div><img class="box-filme" src="assets/images/mini8.jpg" alt="Miniatura 8"></div>
+                <div><img class="box-filme" src="assets/images/mini9.jpg" alt="Miniatura 9"></div>
+                <div><img class="box-filme" src="assets/images/mini10.jpg" alt="Miniatura 10"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Meu Projeto Flexbox e jQuery</p>
+    </footer>
+
+    <!-- Slick Carousel JS -->
+    <script src="assets/plugins/slick.min.js"></script>
+
+    <!-- Script de inicialização -->
+    <script>
+        $(document).ready(function() {
+            $('.carousel').slick({
+                autoplay: true,
+                dots: true,
+                arrows: true,
+                infinite: true,
+            });
+        });
+    </script>
+</body>
+</html>

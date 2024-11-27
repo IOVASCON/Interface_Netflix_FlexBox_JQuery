@@ -1,0 +1,172 @@
+:root {
+    --vermelho: #E50914;
+    --preto: #141414;
+    --amarelo: #ffc107;
+    --azul: #0044cc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Elementos base */
+body {
+    background: var(--preto);
+    font-family: 'Arial', sans-serif;
+    color: white;
+}
+
+header {
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+header .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav a {
+    text-decoration: none;
+    color: var(--amarelo);
+    margin-right: 15px;
+    font-size: 18px;
+}
+
+header nav a:hover {
+    color: #fff;
+}
+
+/* Destaque Principal */
+.filme-principal {
+    height: 70vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url("../images/capa-house.jpg") no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.filme-principal .titulo {
+    color: var(--azul);
+    font-size: 36px;
+}
+
+.filme-principal .descricao {
+    color: #ccc;
+    margin: 10px 0;
+}
+
+.botao {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.botao:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Seções */
+/* Seção Séries */
+#series {
+    background: url('../images/backgrounds/series-background.jpg') no-repeat center center;
+    background-size: contain; /* Mantém a imagem inteira visível */
+    background-attachment: fixed; /* Fixa a imagem durante o scroll */
+    padding: 50px 20px; /* Reduzido para ajustar melhor */
+    color: white;
+    height: 40vh; /* Altura mais moderada */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Seção Filmes */
+#filmes {
+    background: url('../images/backgrounds/movies-background.jpg') no-repeat center center;
+    background-size: contain; /* Mantém a imagem inteira visível */
+    background-attachment: fixed;
+    padding: 50px 20px;
+    color: white;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Seção Documentários */
+#documentarios {
+    background: url('../images/backgrounds/documentaries-background.jpg') no-repeat center center;
+    background-size: contain; /* Mantém a imagem inteira visível */
+    background-attachment: fixed;
+    padding: 50px 20px;
+    color: white;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo do botão "Voltar ao Início" */
+.botao-voltar {
+    background-color: var(--amarelo);
+    color: var(--preto);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+.botao-voltar:hover {
+    background-color: var(--vermelho);
+    color: white;
+}
+
+/* Carrossel */
+.carousel-filmes {
+    background-color: var(--amarelo);
+    padding: 20px;
+}
+
+.carousel img {
+    width: auto;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Responsividade */
+@media screen and (max-width: 700px) {
+    .filme-principal {
+        height: 50vh;
+        text-align: center;
+    }
+
+    .botao {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .secoes {
+        height: auto;
+        padding: 50px 20px;
+    }
+}
